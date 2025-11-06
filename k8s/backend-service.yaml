@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: corider-backend-service
+spec:
+  selector:
+    app: corider-backend
+  ports:
+    - port: 5050
+      targetPort: 5050
+  type: ClusterIP
+

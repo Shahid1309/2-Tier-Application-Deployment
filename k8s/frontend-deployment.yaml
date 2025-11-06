@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: corider-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: corider-frontend
+  template:
+    metadata:
+      labels:
+        app: corider-frontend
+    spec:
+      containers:
+        - name: corider-frontend
+          image: codewithshahid/corider-frontend:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_API_URL
+              value: "http://rideshare-backend-service:5050"
+
