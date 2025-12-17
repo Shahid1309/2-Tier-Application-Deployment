@@ -23,7 +23,7 @@ export default function AllRides() {
   useEffect(() => {
      const fetchRides = async () => {
        try {
-         const res = await axios.get("GET → https://rideshare-server-2jmo.onrender.com/api/rides/getAllRides");
+         const res = await axios.get("GET → http://localhost:5050/api/rides/getAllRides");
          setRides(res.data);
          setFilteredRides(res.data);
        } catch (error) {

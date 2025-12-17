@@ -17,7 +17,7 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://rideshare-server-6kw5.onrender.com/api/auth/login", {
+      const res = await axios.post("http://localhost:5050/api/auth/login", {
         email,
         password,
       });

@@ -36,7 +36,7 @@ export default function AddRide() {
       const token = localStorage.getItem('token');
       const user = JSON.parse(localStorage.getItem('user') || '{}');
 
-      const res = await fetch('POST → https://rideshare-server-2jmo.onrender.com/api/rides/postRide', {
+      const res = await fetch('POST → http://localhost:5050//api/rides/postRide', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

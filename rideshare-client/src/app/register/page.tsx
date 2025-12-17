@@ -29,7 +29,7 @@ export default function RegisterPage() {
     setIsLoading(true);
 
     try {
-      const res = await axios.post('https://rideshare-server-2jmo.onrender.com/api/auth/register', formData);
+      const res = await axios.post('http://localhost:5050/api/auth/register', formData);
       alert('Registered Successfully!');
       router.push('/login');
     } catch (err) {
