@@ -21,7 +21,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-app.options('*', cors());
+app.options('/*', cors());
 
 // 2️⃣ Body parser
 app.use(express.json());
